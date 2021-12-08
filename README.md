@@ -132,9 +132,7 @@ Next, we plotted the average price (which is basically our main target) vs the m
 Once we had our dataset completely numeric by one-hot encoding the categories, we started determining which features would help improve our model the best. First we checked the variance of all the features from our encoded dataset. Here is a pie chart showing which feature made up the largest section of the 50 lowest variance columns.
 
 
-
-
-
+![Picture10](https://user-images.githubusercontent.com/68388723/145147843-c367c91c-6708-4aaf-a9bd-87aea382c2fb.png)
 
 ### Combining Categorical Data
 
