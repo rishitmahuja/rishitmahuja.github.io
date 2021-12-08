@@ -170,6 +170,7 @@ While performing EDA on the calendar.csv dataset, we were able to calculate aver
 We know mapped the correlation of our remaining features:
 
 
+![Picture11](https://user-images.githubusercontent.com/68388723/145147844-b6ca39ea-bb55-41dc-b21b-89fc23bc2100.png)
 
 
 
@@ -177,6 +178,7 @@ As can be seen by the heat map above, the population groupings have high correla
 
 We can see the impact this change had on our data below:
 
+![Picture12](https://user-images.githubusercontent.com/68388723/145147845-8cfbf7c8-17b3-41e5-a391-da2304275e50.png)
 
 
 We also see that each state has 100% correlation to its metropolitain and that is due to the nature of the data, we only have information about listings in those specific cities. For this reason we will remove the State features from our dataset.
@@ -512,11 +514,7 @@ After XGBoost Hyperparameter Tuning:
 
 ## 
 
-<p id="gdcalert11" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image10.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert12">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image10.png "image_tooltip")
-
+![Picture13](https://user-images.githubusercontent.com/68388723/145147847-1dc18b8d-5f96-41f1-9b13-6f4a77d6e18a.png)
 
 
 ## Reasons for Error
