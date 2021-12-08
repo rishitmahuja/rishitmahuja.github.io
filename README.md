@@ -85,7 +85,8 @@ Now we had all data that should be numeric as numeric, our only problem was conv
 
 The first thing we did was to remove identifying features from the dataset. These included: Host ID, Listing ID, Listing Name.  Then we removed features that are naturally redundant such as Latitude and Longitude, which are unnecessary since we already have a ‘city’ feature as well as features that are not relevant to future predictions such as ‘Availability 30’ 
 
-We also removed features that would be impractical to categorize such as ‘Amenities’ since there are too many amenities and many of them can be inputted custom to a listing. After making those changes to the dataset, we used panda’s get_dummies method to one-hot encode the remaining categorical features. This took our dataset from 46 features to 100 features. The dataset up to this point will be called our “Baseline” dataset. We will discuss further dealings with categorical data in the Feature Selection & Engineering section of the report.  
+We also removed features that would be impractical to categorize such as ‘Amenities’ since there are too many amenities and many of them can be inputted custom to a listing. After making those changes to the dataset, we used panda’s get_dummies method to one-hot encode the remaining categorical features. This took our dataset from 46 features to 100 features. The dataset up to this point will be called our “Baseline” dataset. We will discuss further dealings with categorical data in the 
+Engineering section of the report.  
 
 
 ## EDA
@@ -113,9 +114,17 @@ Our baseline dataset is centered around 5 metropolitan areas: Asheville, Austin,
 
 One of the other datasets we had, calendar, contains over 18,383,956 rows where each row contains an Airbnb listing ID, the date, whether the listing was available on that date, the price, and the metro_area the listing was located at. We wanted to see if we could use the average availability of a listing as one of our features so we plotted the average availability versus the average price of a listing, but found little correlation.
 
+![Picture7](https://user-images.githubusercontent.com/68388723/145147839-619f4925-0ad4-4f2d-b91e-d5484ce437a0.png)
+
+
 We checked how many people usually live in an Airbnb accommodation and it turned out that most of the accommodations are two people. Therefore, we based our following analysis on only two-people accommodations.
 
+![Picture8](https://user-images.githubusercontent.com/68388723/145147841-e3b640d6-2381-4d5f-9c3b-fc5e49574880.png)
+
+
 Next, we plotted the average price (which is basically our main target) vs the metropolitan areas for 2-people accommodations. This shows that the average price of a 2 person rental is consistent across all the metropolitan areas.
+
+![Picture9](https://user-images.githubusercontent.com/68388723/145147842-f074982c-74ee-4fa2-ae43-3dbd85c81e0c.png)
 
 
 ## Feature Selection & Engineering
@@ -124,7 +133,6 @@ Once we had our dataset completely numeric by one-hot encoding the categories, w
 
 
 
-![Picture7](https://user-images.githubusercontent.com/68388723/145147839-619f4925-0ad4-4f2d-b91e-d5484ce437a0.png)
 
 
 
@@ -165,16 +173,12 @@ We know mapped the correlation of our remaining features:
 
 
 
-![Picture8](https://user-images.githubusercontent.com/68388723/145147841-e3b640d6-2381-4d5f-9c3b-fc5e49574880.png)
 
 
 As can be seen by the heat map above, the population groupings have high correlation with one another and with the overall population of the town. The reason for this is because each feature holds the number of individuals in that age group so zip codes with large populations will have large values for each of these features. To address this we combined the 13 age groups into 4 age groups: >= 19, 20-44, 45-64, 65+ and converted the groups from integer values indicating overall population of that group to percentages relative to overall population of the zip code. 
 
 We can see the impact this change had on our data below:
 
-
-
-![Picture9](https://user-images.githubusercontent.com/68388723/145147842-f074982c-74ee-4fa2-ae43-3dbd85c81e0c.png)
 
 
 We also see that each state has 100% correlation to its metropolitain and that is due to the nature of the data, we only have information about listings in those specific cities. For this reason we will remove the State features from our dataset.
