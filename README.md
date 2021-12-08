@@ -393,11 +393,7 @@ We will use Sklearn’s GridSearchCV method to test the ranges for each of these
 
 ### Normalized RMSE
 
-For the purpose of evaluation, we made a new evaluation matrix called normalized_RMSE that is basically 
-
-<p id="gdcalert10" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: equation: use MathJax/LaTeX if your publishing platform supports it. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert11">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
- (we were motivated by one of the homework problems to implement this idea).
+For the purpose of evaluation, we made a new evaluation matrix called normalized_RMSE that is basically RMSE/(y_mean)(we were motivated by one of the homework problems to implement this idea).
 
 Why did we choose the normalized_RMSE matrix?
 
