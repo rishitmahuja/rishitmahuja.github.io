@@ -96,34 +96,19 @@ Our baseline dataset is centered around 5 metropolitan areas: Asheville, Austin,
 
 
 
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+![Picture2](https://user-images.githubusercontent.com/68388723/145147830-fb9d2731-08fc-4a79-8097-90950dda4eff.png)
 
 
-![alt_text](images/image2.png "image_tooltip")
+![Picture3](https://user-images.githubusercontent.com/68388723/145147831-03a6687c-c7cd-46dc-bb3d-c7e8902241b9.png)
 
 
-<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image3.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+![Picture4](https://user-images.githubusercontent.com/68388723/145147834-964c95b5-9fff-4a5f-b870-cf06e1aa3c06.png)
 
 
-![alt_text](images/image3.png "image_tooltip")
+![Picture5](https://user-images.githubusercontent.com/68388723/145147837-bbc2209b-7085-4aa5-a5a7-04cdea4ae520.png)
 
 
-<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image4.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image4.png "image_tooltip")
-
-
-<p id="gdcalert5" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image5.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert6">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image5.png "image_tooltip")
-
-
-<p id="gdcalert6" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image6.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert7">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image6.png "image_tooltip")
+![Picture6](https://user-images.githubusercontent.com/68388723/145147838-4b0212b0-ae00-4ea9-8397-361f7a2505c0.png)
 
 
 One of the other datasets we had, calendar, contains over 18,383,956 rows where each row contains an Airbnb listing ID, the date, whether the listing was available on that date, the price, and the metro_area the listing was located at. We wanted to see if we could use the average availability of a listing as one of our features so we plotted the average availability versus the average price of a listing, but found little correlation.
@@ -139,10 +124,7 @@ Once we had our dataset completely numeric by one-hot encoding the categories, w
 
 
 
-<p id="gdcalert7" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image7.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert8">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image7.png "image_tooltip")
+![Picture7](https://user-images.githubusercontent.com/68388723/145147839-619f4925-0ad4-4f2d-b91e-d5484ce437a0.png)
 
 
 
@@ -183,10 +165,7 @@ We know mapped the correlation of our remaining features:
 
 
 
-<p id="gdcalert8" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image8.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert9">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image8.png "image_tooltip")
+![Picture8](https://user-images.githubusercontent.com/68388723/145147841-e3b640d6-2381-4d5f-9c3b-fc5e49574880.png)
 
 
 As can be seen by the heat map above, the population groupings have high correlation with one another and with the overall population of the town. The reason for this is because each feature holds the number of individuals in that age group so zip codes with large populations will have large values for each of these features. To address this we combined the 13 age groups into 4 age groups: >= 19, 20-44, 45-64, 65+ and converted the groups from integer values indicating overall population of that group to percentages relative to overall population of the zip code. 
@@ -195,10 +174,7 @@ We can see the impact this change had on our data below:
 
 
 
-<p id="gdcalert9" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image9.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert10">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image9.png "image_tooltip")
+![Picture9](https://user-images.githubusercontent.com/68388723/145147842-f074982c-74ee-4fa2-ae43-3dbd85c81e0c.png)
 
 
 We also see that each state has 100% correlation to its metropolitain and that is due to the nature of the data, we only have information about listings in those specific cities. For this reason we will remove the State features from our dataset.
