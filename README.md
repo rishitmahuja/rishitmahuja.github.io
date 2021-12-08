@@ -41,10 +41,7 @@ We checked null values for demographics and listings as well and found that demo
 
 
 
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image1.png "image_tooltip")
+![Picture1](https://user-images.githubusercontent.com/68388723/145147827-417c0b4e-e723-4fd5-8ba8-9f07c3c38b01.png)
 
 
  Specifically we saw that:
