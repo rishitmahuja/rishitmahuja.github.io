@@ -1,8 +1,7 @@
 
 # CS 4641 Machine Learning Final Report
-Alfredo Gateno, Alon Baruch, Matthew Grant, Rishit Mohan Ahuja, Shaun Sharma
+Rishit Mohan Ahuja, Alfredo Gateno, Alon Baruch, Matthew Grant, Shaun Sharma
 
-**Link to the video:** https://youtu.be/0Veir3Y800A 
 
 # Intro/Background
 
